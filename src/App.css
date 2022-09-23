@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    width: 80vw;
+    margin: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container-fluid {
+    width: 100vw;
+    /* margin: auto; */
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+    background-color: #110b37;
+    padding: 15px;
+    margin: 20px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-center {
+    text-align: center;
+}
+
+/* Navbar CSS */
+
+.navbar {
+    background-color: black;
+    color: white;
+    height: 60px;
+    overflow-x: clip;
+    font-size: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul li {
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 10vw;
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+    max-width: 160px;
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li:hover {
+    background-color: #110b37;
+    box-shadow: 0px 1px 20px 6px #0c127f;
+}
+
+/* Home CSS */
+
+.banner {
+    display: flex;
+    background: url('./images/banner.jpg') no-repeat center center;
+    background-size: 100% 1100px;
+    height: calc(100vh - 60px);
+    width: inherit;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-btn {
+    background-color: #110b37;
+    transition: 700ms ease-in-out;
+    font-size: 20px;
+}
+
+.banner-btn:hover {
+    background-color: #180493;
+    box-shadow: 0px 1px 8px 3px #1c2396;
+}
+
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+    justify-content: space-evenly;
+    max-width: 1430px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 30px;
+    width: 300px;
+}
+
+.project img{
+    height: 300px;
+    width: 265px;
+}
+
+.project p {
+    margin: 10px 0px;
+    text-align: justify;
 }
